@@ -7,7 +7,7 @@ ENV JAVA_OPTS="-Xms512m -Xmx1024m -Djava.net.preferIPv4Stack=true"
 COPY JavaEEPractice.war /opt/jboss/wildfly/standalone/deployments/
 
 # Expose the ports needed by your application
-EXPOSE 80 9990
+EXPOSE 8080 9990
 
 # Set the default command to start Wildfly
 CMD ["/opt/jboss/wildfly/bin/standalone.sh", "-b", "0.0.0.0", "-bmanagement", "0.0.0.0"]
